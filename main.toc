@@ -1,0 +1,8 @@
+\babel@toc {indonesian}{}\relax 
+\contentsline {chapter}{\numberline {1}Progres Belajar}{2}{}%
+\contentsline {section}{\numberline {1.1}Belajar materi pendidikan dan latex}{2}{}%
+\contentsline {subsection}{\numberline {1.1.1}Aktivitas Hari Ini}{2}{}%
+\contentsline {subsection}{\numberline {1.1.2}Log Error \& Solusi (The Real Struggle)}{2}{}%
+\contentsline {subsubsection}{1. Masalah Instalasi Compiler}{2}{}%
+\contentsline {subsubsection}{2. Syntax Error: Simbol Dan (\&)}{3}{}%
+\contentsline {subsubsection}{3. VS Code vs Terminal}{3}{}%

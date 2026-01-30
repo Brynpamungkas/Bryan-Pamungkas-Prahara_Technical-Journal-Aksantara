@@ -1,0 +1,42 @@
+%!TEX root = ../main.tex
+
+\chapter{Progres Belajar}
+\section{Belajar materi pendidikan dan latex}
+Kegiatan-kegiatan yang tercantum pada bab ini saya laksanakan pada tanggal 29 hingga 30 Januari 2026.
+
+\subsection{Aktivitas Hari Ini}
+Hari ini rencananya mau bikin rangkuman, tapi malah berakhir \textit{debugging} environment seharian. Pertama kali belajar nulis latex dari vscode, ternyata banyak hal yang perlu diinstal terus debugging dan troubleshoot banyak hal. Untuk materi \textit{day} 1 dan 2 cuma bisa dibaca-baca ulang, untuk besok pagi akan segera dipahami dan akan dibuat rangkumannya.
+
+\vspace{1cm}
+Hal-hal yang berhasil dikerjakan:
+\begin{itemize}
+    \item Membaca ulang materi pendidikan serta memahami.
+    \item Inisialisasi Git dan menghubungkan remote ke GitHub.
+    \item Install ekstensi \textit{LaTeX Workshop} di VS Code.
+    \item Install compiler MiKTeX (setelah sempat diblokir Windows Defender).
+    \item Troubleshooting error build beruntun.
+\end{itemize}
+
+\subsection{Log Error \& Solusi (The Real Struggle)}
+Sebenernya error lama ini mayoritas disebabkan karena pengen liat preview di vscode. Meski lama ini merupakan investasi buat kedepannya saat ngga make github. 
+
+\subsubsection{1. Masalah Instalasi Compiler}
+Awalnya preview tidak muncul sama sekali (abu-abu). Ternyata karena belum ada \textit{compiler}. Saat install MiKTeX, sempat tertahan layar ungu \textit{"Windows protected your PC"}.
+\textbf{Solusi:} Paksa jalan dengan klik \textit{Run anyway}.
+
+\subsubsection{2. Syntax Error: Simbol Dan (\&)}
+Build gagal total dengan pesan error yang membingungkan:
+\begin{lstlisting}[language=bash, caption=Error Simbol]
+! Misplaced alignment tab character &.
+\end{lstlisting}
+\textbf{Analisis:} Ternyata di LaTeX, simbol `\&` dipakai untuk membuat tabel. 
+\textbf{Fix:} Harus menulisnya dengan \textit{backslash} di depannya (\texttt{\textbackslash\&}). Bonus: waktu nulis ini sampe selesai si "\&" masih eror lagi jir sampe agak lama baru notice...
+
+\subsubsection{3. VS Code vs Terminal}
+VS Code terus-menerus memberikan notifikasi \textit{"Recipe terminated with error"} dan mengeluh soal update MiKTeX, padahal file PDF sebenarnya berhasil dibuat.
+\textbf{Workaround:} Saya mem-bypass tombol build VS Code dan menggunakan terminal manual:
+\begin{lstlisting}[language=bash]
+pdflatex main.tex
+\end{lstlisting}
+Hasilnya: \texttt{Output written on main.pdf}. Namun, sekarang udah bener-bener bisa setelah instal "pearl" (jujur kurang tau gunanya, next cari tau)
+
